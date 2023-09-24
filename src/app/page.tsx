@@ -1,5 +1,6 @@
 "use client";
 import Button from "@/components/Button/Button";
+import { useWindowSize } from "@/hooks/useWindowSize";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useCallback, useEffect } from "react";
 
@@ -10,7 +11,8 @@ export default function Home() {
     const springX = useSpring(x, { stiffness: 300, damping: 100 });
     const springY = useSpring(y, { stiffness: 300, damping: 100 });
 
-    const { innerWidth: w, innerHeight: h } = window;
+    // const { innerWidth: w, innerHeight: h } = window;
+    const { width: w, height: h } = useWindowSize();
 
     const translateX1 = useTransform(springX, [0, w], ["0%", "-2%"]);
     const translateY1 = useTransform(springY, [0, h], ["0%", "-2%"]);

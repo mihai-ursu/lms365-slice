@@ -19,7 +19,7 @@ export default function Home() {
     const translateY2 = useTransform(springY, [0, h], ["6%", "-10%"]);
 
     const handleMouseMove = useCallback(
-        (event) => {
+        (event: any) => {
             const { pageX, pageY } = event;
 
             x.set(pageX);
@@ -29,7 +29,7 @@ export default function Home() {
     );
 
     useEffect(() => {
-        const motionEvent = window.addEventListener("devicemotion", function (event) {
+        const motionEvent: any = window.addEventListener("devicemotion", function (event: any) {
             const accX = event.accelerationIncludingGravity.x;
             const accY = event.accelerationIncludingGravity.y * -1;
             const isLandscape = window.matchMedia("(orientation: landscape)").matches;

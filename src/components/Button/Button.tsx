@@ -8,7 +8,7 @@ const Button = () => {
             <motion.div className="absolute left-0 z-0 h-12 w-12 rounded-3xl bg-orange-600 p-4 text-white transition-all duration-300 group-hover:w-[102%]">
                 <FaChevronRight />
             </motion.div>
-            <span className="relative z-10 transition-colors duration-300 group-hover:text-white">Learn More</span>
+            <span className="relative z-10 font-bold transition-colors duration-300 group-hover:text-white">Learn More</span>
         </button>
     );
 };
